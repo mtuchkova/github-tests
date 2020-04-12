@@ -7,6 +7,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
+import static org.openqa.selenium.By.*;
+
 public class FirstTest   {
 
     WebDriver driver;
@@ -25,10 +27,22 @@ public class FirstTest   {
     public void secondTest () {
         ChromeDriverManager.getInstance(DriverManagerType.CHROME).setup();
         driver = new ChromeDriver();
-        driver.get("https://github.com/");
+        driver.get("https://github.com/session");
         driver.manage().window().maximize();
-        driver.findElement (By.cssSelector("[id='login_field']"));
+        By login = cssSelector("[id='login_field']");
+        driver.findElement(login);
+        driver.quit();
 
+    }
+
+    @Test (priority =2)
+    public void thirdTest () {
+        ChromeDriverManager.getInstance(DriverManagerType.CHROME).setup();
+        driver = new ChromeDriver();
+        driver.get("https://github.com/session");
+        driver.manage().window().maximize();
+        By password = By.cssSelector("[id='password']");
+        driver.findElement(password);
         driver.quit();
 
     }
