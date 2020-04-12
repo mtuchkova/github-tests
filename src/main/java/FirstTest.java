@@ -9,12 +9,12 @@ import java.util.concurrent.TimeUnit;
 
 import static org.openqa.selenium.By.*;
 
-public class FirstTest   {
+public class FirstTest {
 
     WebDriver driver;
 
     @Test
-    public void openPage () {
+    public void openPage() {
         ChromeDriverManager.getInstance(DriverManagerType.CHROME).setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -24,7 +24,7 @@ public class FirstTest   {
     }
 
     @Test
-    public void secondTest () {
+    public void secondTest() {
         ChromeDriverManager.getInstance(DriverManagerType.CHROME).setup();
         driver = new ChromeDriver();
         driver.get("https://github.com/session");
@@ -36,7 +36,7 @@ public class FirstTest   {
     }
 
     @Test
-    public void thirdTest () {
+    public void thirdTest() {
         ChromeDriverManager.getInstance(DriverManagerType.CHROME).setup();
         driver = new ChromeDriver();
         driver.get("https://github.com/session");
@@ -46,5 +46,16 @@ public class FirstTest   {
         driver.quit();
 
     }
-}
 
+    @Test
+    public void fourTest() {
+        ChromeDriverManager.getInstance(DriverManagerType.CHROME).setup();
+        driver = new ChromeDriver();
+        driver.get("https://github.com/session");
+        driver.manage().window().maximize();
+        driver.findElement(By.name("commit")).click();
+        driver.quit();
+
+    }
+
+}
