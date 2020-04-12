@@ -35,7 +35,7 @@ public class FirstTest   {
 
     }
 
-    @Test (priority =2)
+    @Test
     public void thirdTest () {
         ChromeDriverManager.getInstance(DriverManagerType.CHROME).setup();
         driver = new ChromeDriver();
