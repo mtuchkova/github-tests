@@ -1,19 +1,20 @@
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 import io.github.bonigarcia.wdm.DriverManagerType;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
 
 import java.util.concurrent.TimeUnit;
 
-import static org.openqa.selenium.By.*;
+
 
 public class FirstTest {
 
     WebDriver driver;
 
-    @Test
+    @Test(priority = 1)
     public void openPage() {
         ChromeDriverManager.getInstance(DriverManagerType.CHROME).setup();
         driver = new ChromeDriver();
@@ -23,39 +24,18 @@ public class FirstTest {
 
     }
 
-    @Test
+    @Test(priority = 2)
     public void secondTest() {
         ChromeDriverManager.getInstance(DriverManagerType.CHROME).setup();
         driver = new ChromeDriver();
         driver.get("https://github.com/session");
         driver.manage().window().maximize();
-        By login = cssSelector("[id='login_field']");
-        driver.findElement(login);
+        driver.findElement(By.cssSelector("[id='login_field']")).sendKeys("angelina.batayeva@gmail.com");
+        driver.findElement(By.cssSelector("[name='password']")).sendKeys("Angryowl19752606");
+        driver.findElement(By.cssSelector("[value='Sign in']")).click();
         driver.quit();
 
-    }
-
-    @Test
-    public void thirdTest() {
-        ChromeDriverManager.getInstance(DriverManagerType.CHROME).setup();
-        driver = new ChromeDriver();
-        driver.get("https://github.com/session");
-        driver.manage().window().maximize();
-        By password = By.cssSelector("[id='password']");
-        driver.findElement(password);
-        driver.quit();
 
     }
-
-    @Test
-    public void fourTest() {
-        ChromeDriverManager.getInstance(DriverManagerType.CHROME).setup();
-        driver = new ChromeDriver();
-        driver.get("https://github.com/session");
-        driver.manage().window().maximize();
-        driver.findElement(By.name("commit")).click();
-        driver.quit();
-
-    }
-
 }
+
