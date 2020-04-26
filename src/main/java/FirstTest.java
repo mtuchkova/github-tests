@@ -1,7 +1,4 @@
-import io.github.bonigarcia.wdm.ChromeDriverManager;
-import io.github.bonigarcia.wdm.DriverManagerType;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -55,7 +52,7 @@ public class FirstTest extends TestBase{
         elementsHelper.clickOnVisibleAndClickableElement(newRepository.newrepositoryButton, 10);
 
 
-        Assert.assertTrue(elementsHelper.isElementClickable(newRepository.ownerButton, 5), "ownerButton shold be clickable");
+        Assert.assertTrue(elementsHelper.isElementClickable(newRepository.ownerButton, 5), "ownerButton should be clickable");
         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newRepository.ownerButton, 1), "Owner angelinaaa");
 
 
@@ -104,7 +101,7 @@ public class FirstTest extends TestBase{
          Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newOrganization.blockFreeButton,1),"Join for free");
 
          Assert.assertTrue(elementsHelper.isElementClickable(newOrganization.blockTeamButton,1),"Team button should be clickable");
-         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newOrganization.blockTeamButton,1),"Countinue with team");
+         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newOrganization.blockTeamButton,1),"Continue with team");
 
          Assert.assertTrue(elementsHelper.isElementClickable(newOrganization.blockEnterpriseButton,1),"Enterprise button should be clickable");
          Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newOrganization.blockEnterpriseButton,1),"Start enterprise trial");
