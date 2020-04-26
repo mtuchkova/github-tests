@@ -75,15 +75,6 @@ public class ElementsHelper {
         }
     }
 
-    public boolean isElementSelected (By element, int timeout) {
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(timeout));
-        try {
-            wait.until(ExpectedConditions.elementToBeSelected(element));
-            return true;
-        }
-        catch (NoSuchElementException e) {
-            throw new RuntimeException("Web element is not selected:" + element, e);
-        }
-    }
+
 
 }
