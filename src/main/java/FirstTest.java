@@ -1,4 +1,5 @@
 
+import Pages.HeaderTabs;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -53,17 +54,17 @@ public class FirstTest extends TestBase{
 
 
         Assert.assertTrue(elementsHelper.isElementClickable(newRepository.ownerButton, 5), "ownerButton should be clickable");
-        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newRepository.ownerButton, 1), "Owner angelinaaa");
+        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newRepository.ownerButton, 1), "angelinaaa");
 
 
         Assert.assertTrue(elementsHelper.isElementClickable(newRepository.addgitignoreButton, 1), "addgitignoreButton should be clickable");
-        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newRepository.addgitignoreButton, 1), "addgitignore");
+        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newRepository.addgitignoreButton, 1), "Add .gitignore: None");
 
         Assert.assertTrue(elementsHelper.isElementClickable(newRepository.addlicenseButton, 1), "addlicenseButton should be clickable");
-        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newRepository.addlicenseButton, 1), "addlicense");
+        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newRepository.addlicenseButton, 1), "Add a license:");
 
         Assert.assertTrue(elementsHelper.isElementClickable(newRepository.importRepositoryLink, 1), "importRepositoryLink should be clickable");
-        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newRepository.importRepositoryLink, 1), "import a repository");
+        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newRepository.importRepositoryLink, 1), "Import a repository.");
 
     }
 }

@@ -2,10 +2,10 @@ import org.openqa.selenium.By;
 
 public class NewRepository {
     public By newrepositoryButton = By.cssSelector("[data-ga-click='Header, create new repository']");
-    public By ownerButton = By.cssSelector("[class='form-group float-left']");
-    public By addgitignoreButton = By.cssSelector("[class='details-reset details-overlay select-menu'][aria-haspopup='menu']");
-    public By addlicenseButton = By.cssSelector("[class='btn btn-sm select-menu-button'][aria-haspopup='menu']");
-    public By importRepositoryLink = By.cssSelector("[data-ga-click='Create Repository, import repository, location:repo new']");
+    public By ownerButton = By.cssSelector("[id='repository-owner']");
+    public By addgitignoreButton = By.cssSelector("[class='details-reset details-overlay select-menu']");
+    public By addlicenseButton = By.cssSelector("summary > span.text-normal");
+    public By importRepositoryLink = By.cssSelector("#new_repository > div.Subhead > p > a");
 
     //public By subheadHeading = By.cssSelector("[class='Subhead-heading'][aria-label='Global'] [href='explore']");
 
