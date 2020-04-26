@@ -6,5 +6,5 @@ public class HeaderTabs {
     public By headerTabIssues = (By.cssSelector("[aria-label='Issues you created']"));
     public By headerTabMarketplace = (By.cssSelector("[aria-label='Global'] [href='/marketplace']"));
     public By headerTabExplore = (By.cssSelector("[aria-label='Global'] [href='/explore']"));
-    public By profileAndMoreMenuButton = (By.cssSelector("[aria-label='View profile and more']"));
+    public By CreateNewMenuButton = (By.cssSelector("[aria-label='Create new…']"));
 }
