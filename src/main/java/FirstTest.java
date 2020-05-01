@@ -8,16 +8,15 @@ import org.testng.annotations.Test;
 
 
 
-public class FirstTest extends TestBase{
-
+public class FirstTest extends TestBase {
 
 
     LoginPage loginPage = new LoginPage();
     HeaderTabs headerTabs = new HeaderTabs();
     NewRepository newRepository = new NewRepository();
-    // ImportRepository importRepository = new ImportRepository();
-    // NewGists newGists = new NewGists();
-    //  NewOrganization newOrganization = new NewOrganization();
+    ImportRepository importRepository = new ImportRepository();
+    NewGist newGist = new NewGist();
+    NewOrganization newOrganization = new NewOrganization();
     //NewProject newProject = new NewProject();
 
 
@@ -67,50 +66,53 @@ public class FirstTest extends TestBase{
         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newRepository.importRepositoryLink, 1), "Import a repository.");
 
     }
-}
 
-   /* @Test(priority = 4)
+
+    @Test(priority = 4)
     public void importRepository() {
-        elementsHelper.clickOnVisibleAndClickableElement(headerTabs.CreateNewMenuButton,10);
-        elementsHelper.clickOnVisibleAndClickableElement(importRepository.importRepositoryButton,10);
+        elementsHelper.clickOnVisibleAndClickableElement(headerTabs.CreateNewMenuButton, 10);
+        elementsHelper.clickOnVisibleAndClickableElement(importRepository.importRepositoryButton, 10);
 
-        Assert.assertTrue(elementsHelper.isElementVisible(importRepository.cloneUrlField,1),"cloneUrl Field is visible");
+        Assert.assertTrue(elementsHelper.isElementVisible(importRepository.cloneUrlField, 1), "cloneUrl Field is visible");
 
-        Assert.assertTrue(elementsHelper.isElementClickable(importRepository.cancelButton,1),"cancel button should be clickable");
-        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(importRepository.cancelButton,1),"cancel");
+        Assert.assertTrue(elementsHelper.isElementClickable(importRepository.cancelButton, 1), "cancel button should be clickable");
+        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(importRepository.cancelButton, 1), "Cancel");
 
-        Assert.assertTrue(elementsHelper.isElementClickable(importRepository.beginImportButton,1),"Begim importButton is clickable");
-        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(importRepository.beginImportButton,1),"begin import");
+        Assert.assertTrue(elementsHelper.isElementClickable(importRepository.beginImportButton, 1), "Begin importButton is clickable");
+        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(importRepository.beginImportButton, 1), "Begin import");
     }
 
-    @Test(priority = 5)
-    public void newGists() {
-        elementsHelper.clickOnVisibleAndClickableElement(headerTabs.CreateNewMenuButton,10);
-        elementsHelper.clickOnVisibleAndClickableElement(newGists.newGistButton,1);
 
-        Assert.assertTrue(elementsHelper.isElementClickable(newGists.addFile,1),"add file button should be clickable");
-        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newGists.addFile,1),"add file");
+    @Test(priority = 5)
+    public void newGist() {
+        elementsHelper.clickOnVisibleAndClickableElement(headerTabs.CreateNewMenuButton, 10);
+        elementsHelper.clickOnVisibleAndClickableElement(newGist.newGistButton, 1);
+
+        Assert.assertTrue(elementsHelper.isElementClickable(newGist.addFile, 1), "add file button should be clickable");
+        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newGist.addFile, 1), "Add file");
 
     }
 
     @Test(priority = 6)
     public void newOrganization() {
-        elementsHelper.clickOnVisibleAndClickableElement(headerTabs.CreateNewMenuButton,10);
-        elementsHelper.clickOnVisibleAndClickableElement(newOrganization.newOrganizatoinButton,10);
+        elementsHelper.clickOnVisibleAndClickableElement(headerTabs.CreateNewMenuButton, 10);
+        elementsHelper.clickOnVisibleAndClickableElement(newOrganization.newOrganizatoinButton, 10);
 
-         Assert.assertTrue(elementsHelper.isElementClickable(newOrganization.blockFreeButton,1),"Block free button shold be clickable");
-         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newOrganization.blockFreeButton,1),"Join for free");
+        Assert.assertTrue(elementsHelper.isElementClickable(newOrganization.blockFreeButton, 1), "Block free button shold be clickable");
+        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newOrganization.blockFreeButton, 1), "Join for free");
 
-         Assert.assertTrue(elementsHelper.isElementClickable(newOrganization.blockTeamButton,1),"Team button should be clickable");
-         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newOrganization.blockTeamButton,1),"Continue with team");
+        Assert.assertTrue(elementsHelper.isElementClickable(newOrganization.blockTeamButton, 1), "Team button should be clickable");
+        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newOrganization.blockTeamButton, 1), "Continue with team");
 
-         Assert.assertTrue(elementsHelper.isElementClickable(newOrganization.blockEnterpriseButton,1),"Enterprise button should be clickable");
-         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newOrganization.blockEnterpriseButton,1),"Start enterprise trial");
+        Assert.assertTrue(elementsHelper.isElementClickable(newOrganization.blockEnterpriseButton, 1), "Enterprise button should be clickable");
+        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newOrganization.blockEnterpriseButton, 1), "Start enterprise trial");
 
 
     }
 
-    @Test(priority = 7)
+}
+
+   /* @Test(priority = 7)
     public void newProject() {
         elementsHelper.clickOnVisibleAndClickableElement(headerTabs.CreateNewMenuButton, 10);
         elementsHelper.clickOnVisibleAndClickableElement(newProject.newProjectButton, 10);
