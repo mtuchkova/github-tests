@@ -17,7 +17,7 @@ public class FirstTest extends TestBase {
     ImportRepository importRepository = new ImportRepository();
     NewGist newGist = new NewGist();
     NewOrganization newOrganization = new NewOrganization();
-    //NewProject newProject = new NewProject();
+    NewProject newProject = new NewProject();
 
 
     @Test(priority = 1)
@@ -43,6 +43,9 @@ public class FirstTest extends TestBase {
 
         Assert.assertTrue(elementsHelper.isElementClickable(headerTabs.headerTabExplore, 1), "exploreButton should be clickable");
         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(headerTabs.headerTabExplore, 1), "Explore");
+
+        Assert.assertTrue(elementsHelper.isElementClickable(headerTabs.CreateNewMenuButton,1));
+
     }
 
 
@@ -105,27 +108,27 @@ public class FirstTest extends TestBase {
         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newOrganization.blockTeamButton, 1), "Continue with team");
 
         Assert.assertTrue(elementsHelper.isElementClickable(newOrganization.blockEnterpriseButton, 1), "Enterprise button should be clickable");
-        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newOrganization.blockEnterpriseButton, 1), "Start enterprise trial");
+        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newOrganization.blockEnterpriseButton, 1), "Start Enterprise trial");
 
 
     }
 
-}
 
-   /* @Test(priority = 7)
+
+   @Test(priority = 7)
     public void newProject() {
         elementsHelper.clickOnVisibleAndClickableElement(headerTabs.CreateNewMenuButton, 10);
         elementsHelper.clickOnVisibleAndClickableElement(newProject.newProjectButton, 10);
 
         Assert.assertTrue(elementsHelper.isElementClickable(newProject.templateButton, 1), "template button should be displsyed");
-        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newProject.templateButton, 1), "Template None");
+        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newProject.templateButton, 1), "Template:None");
 
 
     }
 
 }
 
- */
+
 
 
 
