@@ -1,4 +1,3 @@
-
 import Pages.HeaderTabs;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -88,12 +87,12 @@ public class FirstTest extends TestBase {
 
     @Test(priority = 5)
     public void newGist() {
-        elementsHelper.clickOnVisibleAndClickableElement(headerTabs.CreateNewMenuButton, 10);
-        elementsHelper.clickOnVisibleAndClickableElement(newGist.newGistButton, 1);
+        elementsHelper.clickOnVisibleAndClickableElement(headerTabs.CreateNewMenuButton, 15);
+        elementsHelper.clickOnVisibleAndClickableElement(newGist.newGistButton, 15);
 
-        Assert.assertTrue(elementsHelper.isElementClickable(newGist.addFile, 1), "add file button should be clickable");
+        Assert.assertTrue(elementsHelper.isElementClickable(newGist.addFile, 5), "add file button should be clickable");
         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newGist.addFile, 1), "Add file");
-
+         elementsHelper.clickOnVisibleAndClickableElement(newGist.backToGitHubButton,1);
     }
 
     @Test(priority = 6)
@@ -105,11 +104,10 @@ public class FirstTest extends TestBase {
         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newOrganization.blockFreeButton, 1), "Join for free");
 
         Assert.assertTrue(elementsHelper.isElementClickable(newOrganization.blockTeamButton, 1), "Team button should be clickable");
-        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newOrganization.blockTeamButton, 1), "Continue with team");
+        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newOrganization.blockTeamButton, 1), "Continue with Team");
 
         Assert.assertTrue(elementsHelper.isElementClickable(newOrganization.blockEnterpriseButton, 1), "Enterprise button should be clickable");
         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newOrganization.blockEnterpriseButton, 1), "Start Enterprise trial");
-
 
     }
 
@@ -120,10 +118,11 @@ public class FirstTest extends TestBase {
         elementsHelper.clickOnVisibleAndClickableElement(headerTabs.CreateNewMenuButton, 10);
         elementsHelper.clickOnVisibleAndClickableElement(newProject.newProjectButton, 10);
 
-        Assert.assertTrue(elementsHelper.isElementClickable(newProject.templateButton, 1), "template button should be displsyed");
-        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newProject.templateButton, 1), "Template:None");
+       Assert.assertTrue(elementsHelper.isElementPresence(newProject.projectBoardName, 10), "  Project board name should be presence");
+       driver.findElement(newProject.projectBoardName).sendKeys("HardCore");
 
-
+       Assert.assertTrue(elementsHelper.isElementClickable(newProject.createProjectButton,5));
+       Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newProject.createProjectButton,1),"Create project");
     }
 
 }
