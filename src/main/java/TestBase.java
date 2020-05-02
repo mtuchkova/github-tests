@@ -23,7 +23,7 @@ public class TestBase {
     NewProject newProject = new NewProject();
 
     @BeforeClass
-    @Parameters("browser")
+    @Parameters(value = "browser")
     public void setUp(Browsers browser) {
         switch (browser) {
             case CHROME:
