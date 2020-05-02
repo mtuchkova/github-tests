@@ -10,13 +10,6 @@ import org.testng.annotations.Test;
 public class FirstTest extends TestBase {
 
 
-    LoginPage loginPage = new LoginPage();
-    HeaderTabs headerTabs = new HeaderTabs();
-    NewRepository newRepository = new NewRepository();
-    ImportRepository importRepository = new ImportRepository();
-    NewGist newGist = new NewGist();
-    NewOrganization newOrganization = new NewOrganization();
-    NewProject newProject = new NewProject();
 
 
     @Test(priority = 1)
