@@ -55,7 +55,7 @@ public class FirstTest extends TestBase {
         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newRepository.addgitignoreButton, 1), "Add .gitignore: None");
 
         Assert.assertTrue(elementsHelper.isElementClickable(newRepository.addlicenseButton, 1), "addlicenseButton should be clickable");
-        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newRepository.addlicenseButton, 1), "Add a license:");
+        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newRepository.addlicenseButton, 1), "Add a license: None");
 
         Assert.assertTrue(elementsHelper.isElementClickable(newRepository.importRepositoryLink, 1), "importRepositoryLink should be clickable");
         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newRepository.importRepositoryLink, 1), "Import a repository.");
