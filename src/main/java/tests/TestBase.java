@@ -1,4 +1,5 @@
-import Pages.HeaderTabs;
+package tests;
+
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 import io.github.bonigarcia.wdm.DriverManagerType;
 import io.github.bonigarcia.wdm.OperaDriverManager;
@@ -8,19 +9,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.testng.annotations.*;
-
+import pages.LoginPage;
+import Helpers.ElementsHelper;
+import pages.*;
 
 public class TestBase {
+
     WebDriver driver;
     ElementsHelper elementsHelper;
-    public String testUrl = ("https://github.com/session");
+    public String testUrl = ("https://github.com/login");
     LoginPage loginPage = new LoginPage();
     HeaderTabs headerTabs = new HeaderTabs();
-    NewRepository newRepository = new NewRepository();
-    ImportRepository importRepository = new ImportRepository();
-    NewGist newGist = new NewGist();
-    NewOrganization newOrganization = new NewOrganization();
-    NewProject newProject = new NewProject();
 
     @BeforeClass
     @Parameters(value = "browser")
@@ -45,7 +44,6 @@ public class TestBase {
         driver.get(testUrl);
         driver.manage().window().maximize();
     }
-
     @AfterClass
     public void AfterTests() {
         driver.quit();

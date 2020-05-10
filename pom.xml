@@ -39,7 +39,6 @@
     <artifactId>maven-compiler-plugin</artifactId>
     <version>3.8.1</version>
 </dependency>
-
         <!-- https://mvnrepository.com/artifact/org.apache.maven/maven-plugin-api -->
         <dependency>
             <groupId>org.apache.maven</groupId>
@@ -52,17 +51,13 @@
             <artifactId>selenium-java</artifactId>
             <version>4.0.0-alpha-5</version>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
-
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>7.1.0</version>
             <scope>test</scope>
         </dependency>
-
-
         <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
@@ -74,13 +69,11 @@
             <artifactId>selenium-firefox-driver</artifactId>
             <version>4.0.0-alpha-5</version>
         </dependency>
-
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-opera-driver</artifactId>
             <version>4.0.0-alpha-5</version>
         </dependency>
-
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -98,8 +91,5 @@
          <artifactId>selenium-chrome-driver</artifactId>
          <version>4.0.0-alpha-5</version>
      </dependency>
-
-
-
     </dependencies>
 </project>
