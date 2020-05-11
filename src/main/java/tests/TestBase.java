@@ -1,5 +1,6 @@
 package tests;
 
+import helpers.ElementsHelper;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 import io.github.bonigarcia.wdm.DriverManagerType;
 import io.github.bonigarcia.wdm.OperaDriverManager;
@@ -8,20 +9,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
-import org.testng.annotations.*;
-import pages.LoginPage;
-import Helpers.ElementsHelper;
-import pages.*;
+import org.testng.annotations.AfterGroups;
+import org.testng.annotations.BeforeGroups;
+import org.testng.annotations.Parameters;
 
 public class TestBase {
 
     WebDriver driver;
     ElementsHelper elementsHelper;
     public String testUrl = ("https://github.com/login");
-    LoginPage loginPage = new LoginPage();
-    HeaderTabs headerTabs = new HeaderTabs();
 
-    @BeforeClass
+    @BeforeGroups(groups = "gittest")
     @Parameters(value = "browser")
     public void setUp(Browsers browser) {
         switch (browser) {
@@ -44,8 +42,9 @@ public class TestBase {
         driver.get(testUrl);
         driver.manage().window().maximize();
     }
-    @AfterClass
+    @AfterGroups(groups = "gittest")
     public void AfterTests() {
+
         driver.quit();
     }
 }

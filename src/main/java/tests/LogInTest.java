@@ -1,14 +1,15 @@
 package tests;
 
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+import pages.LoginPage;
 
-public class LogInTest extends FirstTest {
-    String login = "angelina.batayeva@gmail.com";
-    String password = "Angryowl19752606";
-    @BeforeClass
+public class LogInTest extends TestBase {
+    LoginPage loginPage = new LoginPage();
+
+    @Test
     public void logInPageTest() {
-        elementsHelper.textInputField(loginPage.loginField, 10, login);
-        elementsHelper.textInputField(loginPage.passwordField, 10, password);
+        elementsHelper.textInputField(loginPage.loginField, 10, "angelina.batayeva@gmail.com");
+        elementsHelper.textInputField(loginPage.passwordField, 10, "Angryowl19752606");
         elementsHelper.clickOnVisibleAndClickableElement(loginPage.signInButton, 10);
     }
 }

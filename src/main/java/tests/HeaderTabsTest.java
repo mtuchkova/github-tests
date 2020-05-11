@@ -1,11 +1,13 @@
 package tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.HeaderTabs;
 
-public class HeaderTabsTest extends TestBase {
+public class HeaderTabsTest extends LogInTest {
+    HeaderTabs headerTabs = new HeaderTabs();
 
-    @Test(priority = 1)
-    public void checkHeaderTabs() {
+    @Test
+    public void HeaderTabs() {
         Assert.assertTrue(elementsHelper.isElementClickable(headerTabs.headerTabPullRequests, 5), "pullRequestsButton should be clickable");
         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(headerTabs.headerTabPullRequests, 1), "Pull requests");
 

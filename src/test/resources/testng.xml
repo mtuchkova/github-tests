@@ -4,7 +4,9 @@
     <test name="SeparateBrowserTest">
         <parameter name="browser" value="${browser}"/>
         <classes>
-            <class name="tests.FirstTest"/>
+            <class name="tests.LogInTest"/>
+            <class name="tests.HeaderTabsTest"/>
+            <class name="tests.GitHubPageTests"/>
         </classes>
     </test>
 </suite>
