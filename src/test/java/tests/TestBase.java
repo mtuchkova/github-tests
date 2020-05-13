@@ -9,17 +9,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
-import org.testng.annotations.AfterGroups;
-import org.testng.annotations.BeforeGroups;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 
 public class TestBase {
 
-    WebDriver driver;
-    ElementsHelper elementsHelper;
+    public static WebDriver driver;
+    public static ElementsHelper elementsHelper;
     public String testUrl = ("https://github.com/login");
 
-    @BeforeGroups(groups = {"gittest"})
+    //@BeforeGroups(groups = {"gittest"})
+    @BeforeSuite
     @Parameters(value = "browser")
     public void setUp(Browsers browser) {
         switch (browser) {
@@ -42,7 +41,8 @@ public class TestBase {
         driver.get(testUrl);
         driver.manage().window().maximize();
     }
-    @AfterGroups(groups = "gittest")
+    //@AfterGroups(groups = "gittest")
+    @AfterSuite
     public void AfterTests() {
 
         driver.quit();
