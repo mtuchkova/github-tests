@@ -63,8 +63,8 @@ public class ElementsHelper {
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(element));
             return driver.findElement(element).getText();
-
-        } catch (NoSuchElementException e) {
+        }
+         catch (NoSuchElementException e) {
             throw new RuntimeException("Does not see the text of the element within timeout:" + element + "Time" + timeout, e);
         }
     }
@@ -74,7 +74,8 @@ public class ElementsHelper {
         try {
             wait.until(ExpectedConditions.presenceOfElementLocated(inputFieldElement));
             driver.findElement(inputFieldElement).sendKeys(inputText);
-        } catch (NoSuchElementException e) {
+        }
+        catch (NoSuchElementException e) {
             throw new RuntimeException("Text input field is not present:" + inputFieldElement + "Time" + timeout, e);
         }
     }
