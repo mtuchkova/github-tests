@@ -19,7 +19,7 @@ public class TestBase {
     ElementsHelper elementsHelper;
     public String testUrl = ("https://github.com/login");
 
-    @BeforeGroups(groups = "gittest")
+    @BeforeGroups(groups = {"gittest"})
     @Parameters(value = "browser")
     public void setUp(Browsers browser) {
         switch (browser) {

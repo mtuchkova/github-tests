@@ -23,7 +23,8 @@
                 <configuration>
                     <testFailureIgnore>false</testFailureIgnore>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/${java.runtime.name}.xml</suiteXmlFile>
+                        <!--suppress UnresolvedMavenProperty -->
+                        <suiteXmlFile>src/test/resources/${runtest}.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

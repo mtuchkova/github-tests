@@ -3,10 +3,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HeaderTabs;
 
-public class HeaderTabsTest extends LogInTest {
+public class HeaderTabsTest extends TestBase {
     HeaderTabs headerTabs = new HeaderTabs();
 
-    @Test
+    @Test(groups = {"gittest"})
     public void HeaderTabs() {
         Assert.assertTrue(elementsHelper.isElementClickable(headerTabs.headerTabPullRequests, 5), "pullRequestsButton should be clickable");
         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(headerTabs.headerTabPullRequests, 1), "Pull requests");

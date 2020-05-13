@@ -9,7 +9,7 @@ import java.time.Duration;
 
 public class ElementsHelper {
 
-    private final WebDriver driver;
+    private WebDriver driver;
 
     public ElementsHelper(WebDriver driver) {
         this.driver = driver;
