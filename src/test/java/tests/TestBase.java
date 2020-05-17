@@ -17,7 +17,7 @@ public class TestBase {
     public static ElementsHelper elementsHelper;
     public String testUrl = ("https://github.com/login");
 
-    @BeforeSuite
+    @BeforeGroups(groups = {"git_test"})
     @Parameters(value = "browser")
     public void setUp(Browsers browser) {
         switch (browser) {
@@ -41,7 +41,7 @@ public class TestBase {
         driver.manage().window().maximize();
     }
 
-    @AfterSuite
+    @AfterGroups(groups = {"git_test"})
     public void AfterTests() {
 
         driver.quit();

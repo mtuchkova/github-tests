@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="FirstLesson" >
+    <test name="Chrome Browser Test">
+        <parameter name="browser" value="CHROME"/>
+        <classes>
+            <class name="tests.LogInTest"/>
+            <class name="tests.HeaderTabsTest"/>
+            <class name="tests.GitHubPageTests"/>
+        </classes>
+    </test>
+    <test name="FIREFOX Browser Test">
+        <parameter name="browser" value="FIREFOX"/>
+        <classes>
+            <class name="tests.LogInTest"/>
+            <class name="tests.HeaderTabsTest"/>
+            <class name="tests.GitHubPageTests"/>
+        </classes>
+    </test>
+    <test name="OPERA Browser Test">
+        <parameter name="browser" value="OPERA"/>
+        <classes>
+            <class name="tests.LogInTest"/>
+            <class name="tests.HeaderTabsTest"/>
+            <class name="tests.GitHubPageTests"/>
+        </classes>
+    </test>
+</suite>

@@ -12,7 +12,7 @@ public class GitHubPageTests extends TestBase{
     NewOrganization newOrganization = new NewOrganization();
     NewProject newProject = new NewProject();
 
-    @Test(priority = 1,groups = {"gittest"})
+    @Test(priority = 1,groups = {"git_test"})
     public void newRepository() {
         elementsHelper.clickOnVisibleAndClickableElement(headerTabs.createNewMenuButton, 10);
         elementsHelper.clickOnVisibleAndClickableElement(newRepository.newrepositoryButton, 10);
@@ -29,7 +29,7 @@ public class GitHubPageTests extends TestBase{
         Assert.assertTrue(elementsHelper.isElementClickable(newRepository.importRepositoryLink, 1), "importRepositoryLink should be clickable");
         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newRepository.importRepositoryLink, 1), "Import a repository.");
     }
-    @Test(priority = 2,groups = {"gittest"})
+    @Test(priority = 2,groups = {"git_test"})
     public void importRepository() {
         elementsHelper.clickOnVisibleAndClickableElement(headerTabs.createNewMenuButton, 10);
         elementsHelper.clickOnVisibleAndClickableElement(importRepository.importRepositoryButton, 10);
@@ -42,7 +42,7 @@ public class GitHubPageTests extends TestBase{
         Assert.assertTrue(elementsHelper.isElementClickable(importRepository.beginImportButton, 1), "Begin importButton is clickable");
         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(importRepository.beginImportButton, 1), "Begin import");
     }
-    @Test(priority = 3,groups = {"gittest"})
+    @Test(priority = 3,groups = {"git_test"})
     public void newGist() {
         elementsHelper.clickOnVisibleAndClickableElement(headerTabs.createNewMenuButton, 15);
         elementsHelper.clickOnVisibleAndClickableElement(newGist.newGistButton, 15);
@@ -51,7 +51,7 @@ public class GitHubPageTests extends TestBase{
         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newGist.addFile, 1), "Add file");
         elementsHelper.clickOnVisibleAndClickableElement(newGist.backToGitHubButton,1);
     }
-    @Test(priority = 4,groups = {"gittest"})
+    @Test(priority = 4,groups = {"git_test"})
     public void newOrganization() {
         elementsHelper.clickOnVisibleAndClickableElement(headerTabs.createNewMenuButton, 10);
         elementsHelper.clickOnVisibleAndClickableElement(newOrganization.newOrganizatoinButton, 10);
@@ -65,7 +65,7 @@ public class GitHubPageTests extends TestBase{
         Assert.assertTrue(elementsHelper.isElementClickable(newOrganization.blockEnterpriseButton, 1), "Enterprise button should be clickable");
         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newOrganization.blockEnterpriseButton, 1), "Start Enterprise trial");
     }
-   @Test(priority = 5,groups = {"gittest"})
+   @Test(priority = 5,groups = {"git_test"})
     public void newProject() {
         elementsHelper.clickOnVisibleAndClickableElement(headerTabs.createNewMenuButton, 10);
         elementsHelper.clickOnVisibleAndClickableElement(newProject.newProjectButton, 10);

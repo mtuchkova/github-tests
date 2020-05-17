@@ -6,7 +6,7 @@ import pages.HeaderTabs;
 public class HeaderTabsTest extends TestBase {
     HeaderTabs headerTabs = new HeaderTabs();
 
-    @Test(groups = {"gittest"})
+    @Test(groups = {"git_test"})
     public void HeaderTabs() {
         Assert.assertTrue(elementsHelper.isElementClickable(headerTabs.headerTabPullRequests, 5), "pullRequestsButton should be clickable");
         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(headerTabs.headerTabPullRequests, 1), "Pull requests");
