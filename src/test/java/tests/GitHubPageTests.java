@@ -73,7 +73,7 @@ public class GitHubPageTests extends TestBase{
         Assert.assertTrue(elementsHelper.isElementPresent(newProject.projectBoardName, 10), "  Project board name should be presence");
         elementsHelper.textInputField(newProject.projectBoardName,5,"HardCore");
 
-        Assert.assertTrue(elementsHelper.isElementClickable(newProject.createProjectButton,5));
+        Assert.assertTrue(elementsHelper.isElementClickable(newProject.createProjectButton,10));
         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newProject.createProjectButton,1),"Create project");
     }
 }

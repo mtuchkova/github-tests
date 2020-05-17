@@ -7,4 +7,3 @@ public class NewProject {
     public By projectBoardName = By.cssSelector("[id='project_name']");
     public By createProjectButton = By.cssSelector("[class='btn btn-primary flex-auto float-none float-md-left']");
 }
-
