@@ -27,10 +27,10 @@ public class TestBase {
                 FirefoxDriverManager.getInstance(DriverManagerType.FIREFOX).setup();
                 driver = new FirefoxDriver();
                 break;
-            case OPERA:
-                OperaDriverManager.getInstance(DriverManagerType.OPERA).setup();
-                driver = new OperaDriver();
-                break;
+           // case OPERA:
+               // OperaDriverManager.getInstance(DriverManagerType.OPERA).setup();
+              //  driver = new OperaDriver();
+              //  break;
             default:
                 throw new RuntimeException("Invalid specified browser:" + browser + ",expected one of 'CHROME', 'FIREFOX', 'OPERA'");
         }
