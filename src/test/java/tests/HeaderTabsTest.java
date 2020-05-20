@@ -1,10 +1,12 @@
 package tests;
+import helpers.ElementsHelper;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HeaderTabs;
 
 public class HeaderTabsTest extends TestBase {
     HeaderTabs headerTabs = new HeaderTabs();
+
 
     @Test(groups = {"git_test"})
     public void HeaderTabs() {

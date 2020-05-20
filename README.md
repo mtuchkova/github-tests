@@ -9,3 +9,4 @@
 # RunTests:
 - 1.Use command  in terminal IDE "mvn package -Druntest=testng -Dbrowser=CHROME", where -D is parameter.
 - 2.If you want to run test in another browser,create parameter -Dbrowser for FIREFOX or Opera.
+- 3.If you want to run test in all browsers use command "mvn clean package -Druntest=all_browsers"

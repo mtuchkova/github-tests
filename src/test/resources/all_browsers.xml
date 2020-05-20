@@ -3,6 +3,11 @@
 <suite name="FirstLesson" >
     <test name="Chrome Browser Test">
         <parameter name="browser" value="CHROME"/>
+        <groups>
+            <run>
+                <include name="git_test"/>
+            </run>
+        </groups>
         <classes>
             <class name="tests.LogInTest"/>
             <class name="tests.HeaderTabsTest"/>
@@ -11,6 +16,11 @@
     </test>
     <test name="FIREFOX Browser Test">
         <parameter name="browser" value="FIREFOX"/>
+        <groups>
+            <run>
+                <include name="git_test"/>
+            </run>
+        </groups>
         <classes>
             <class name="tests.LogInTest"/>
             <class name="tests.HeaderTabsTest"/>
@@ -19,6 +29,11 @@
     </test>
     <test name="OPERA Browser Test">
         <parameter name="browser" value="OPERA"/>
+        <groups>
+            <run>
+                <include name="git_test"/>
+            </run>
+        </groups>
         <classes>
             <class name="tests.LogInTest"/>
             <class name="tests.HeaderTabsTest"/>

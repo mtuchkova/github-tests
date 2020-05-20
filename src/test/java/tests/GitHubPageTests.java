@@ -1,5 +1,6 @@
 package tests;
 
+import helpers.ElementsHelper;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.*;

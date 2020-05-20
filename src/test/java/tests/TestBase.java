@@ -9,17 +9,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 
 public class TestBase {
 
-    public static WebDriver driver;
+    public  static WebDriver driver;
     public static ElementsHelper elementsHelper;
     public String testUrl = ("https://github.com/login");
 
-    @BeforeGroups(groups = {"git_test"})
-    @Parameters(value = "browser")
-    public void setUp(Browsers browser) {
+    @BeforeGroups(alwaysRun = true,groups = {"git_test"})
+    @Parameters("browser")
+    public void setUp( Browsers browser) {
         switch (browser) {
             case CHROME:
                 ChromeDriverManager.getInstance(DriverManagerType.CHROME).setup();
@@ -41,7 +42,7 @@ public class TestBase {
         driver.manage().window().maximize();
     }
 
-    @AfterGroups(groups = {"git_test"})
+   @AfterGroups(alwaysRun = true,groups = {"git_test"})
     public void AfterTests() {
 
         driver.quit();

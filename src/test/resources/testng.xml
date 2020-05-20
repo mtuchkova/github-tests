@@ -3,6 +3,11 @@
 <suite name="FirstLesson" >
     <test name="SeparateBrowserTest">
         <parameter name="browser" value="${browser}"/>
+        <groups>
+            <run>
+                <include name="git_test"/>
+            </run>
+        </groups>
         <classes>
             <class name="tests.LogInTest"/>
             <class name="tests.HeaderTabsTest"/>
