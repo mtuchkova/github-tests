@@ -27,17 +27,4 @@
             <class name="tests.GitHubPageTests"/>
         </classes>
     </test>
-    <test name="OPERA Browser Test">
-        <parameter name="browser" value="OPERA"/>
-        <groups>
-            <run>
-                <include name="git_test"/>
-            </run>
-        </groups>
-        <classes>
-            <class name="tests.LogInTest"/>
-            <class name="tests.HeaderTabsTest"/>
-            <class name="tests.GitHubPageTests"/>
-        </classes>
-    </test>
 </suite>
