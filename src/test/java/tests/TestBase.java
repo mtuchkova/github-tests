@@ -1,10 +1,7 @@
 package tests;
 
 import helpers.ElementsHelper;
-import io.github.bonigarcia.wdm.ChromeDriverManager;
-import io.github.bonigarcia.wdm.DriverManagerType;
-import io.github.bonigarcia.wdm.OperaDriverManager;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -27,7 +24,7 @@ public class TestBase {
                 driver = new ChromeDriver();
                 break;
             case FIREFOX:
-                WebDriverManager.firefoxdriver().setup();
+                FirefoxDriverManager.getInstance(DriverManagerType.FIREFOX).setup();
                 driver = new FirefoxDriver();
                 break;
             case OPERA:
