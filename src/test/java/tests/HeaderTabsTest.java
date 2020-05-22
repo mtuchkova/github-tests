@@ -1,5 +1,5 @@
 package tests;
-import helpers.ElementsHelper;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HeaderTabs;
@@ -23,5 +23,6 @@ public class HeaderTabsTest extends TestBase {
         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(headerTabs.headerTabExplore, 1), "Explore");
 
         Assert.assertTrue(elementsHelper.isElementClickable(headerTabs.createNewMenuButton,1));
+        Assert.assertTrue(elementsHelper.isElementClickable(headerTabs.viewProfileAndMoreButton,1));
     }
 }

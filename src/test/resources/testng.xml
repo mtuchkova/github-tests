@@ -12,6 +12,7 @@
             <class name="tests.LogInTest"/>
             <class name="tests.HeaderTabsTest"/>
             <class name="tests.GitHubPageTests"/>
+            <class name="tests.MainPageTest"/>
         </classes>
     </test>
 </suite>

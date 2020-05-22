@@ -8,4 +8,5 @@ public class HeaderTabs {
     public By headerTabMarketplace = By.cssSelector("[aria-label='Global'] [href='/marketplace']");
     public By headerTabExplore = By.cssSelector("[aria-label='Global'] [href='/explore']");
     public By createNewMenuButton = By.cssSelector("[data-ga-click='Header, create new, icon:add']");
+    public By viewProfileAndMoreButton = By.cssSelector("[data-ga-click='Header, show menu, icon:avatar']");
 }
