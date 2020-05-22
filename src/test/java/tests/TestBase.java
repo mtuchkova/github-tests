@@ -5,8 +5,6 @@ import io.github.bonigarcia.wdm.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.opera.OperaDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 
 public class TestBase {
@@ -24,9 +22,9 @@ public class TestBase {
                 driver = new ChromeDriver();
                 break;
             case FIREFOX:
-                FirefoxDriverManager.getInstance(DriverManagerType.FIREFOX).setup();
-                driver = new FirefoxDriver();
-                break;
+                 WebDriverManager.firefoxdriver().setup();
+                 driver = new FirefoxDriver();
+                 break;
             default:
                 throw new RuntimeException("Invalid specified browser:" + browser + ",expected one of 'CHROME', 'FIREFOX', 'OPERA'");
         }
