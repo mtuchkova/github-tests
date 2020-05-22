@@ -3,6 +3,7 @@ package helpers;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
@@ -56,6 +57,10 @@ public class ElementsHelper {
         }
         catch (NoSuchElementException e) {
             throw new RuntimeException("Web element is not visible or not clickable within timeout:" + element + "Time" + timeout, e);
+        }
+        catch (WebDriverException e) {
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(element)));
+        driver.findElement(element).click();
         }
     }
 
