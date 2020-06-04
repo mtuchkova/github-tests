@@ -35,7 +35,6 @@ public class GitHubPageTests extends TestBase{
         elementsHelper.clickOnVisibleAndClickableElement(importRepository.importRepositoryButton, 10);
 
         Assert.assertTrue(elementsHelper.isElementVisible(importRepository.cloneUrlField, 1), "cloneUrl Field is visible");
-
         Assert.assertTrue(elementsHelper.isElementClickable(importRepository.cancelButton, 1), "cancel button should be clickable");
         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(importRepository.cancelButton, 1), "Cancel");
 
@@ -75,6 +74,7 @@ public class GitHubPageTests extends TestBase{
 
         Assert.assertTrue(elementsHelper.isElementClickable(newProject.createProjectButton,15));
         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newProject.createProjectButton,1),"Create project");
+
     }
 }
 
