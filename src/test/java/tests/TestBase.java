@@ -7,6 +7,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import org.testng.annotations.*;
 
+
+
 public class TestBase {
 
     public static WebDriver driver;
@@ -18,8 +20,10 @@ public class TestBase {
     public void setUp(Browsers browser) {
 //                ChromeDriverManager.getInstance(DriverManagerType.CHROME).setup();
 //                ChromeDriverManager.chromedriver().browserVersion("87.0.4280.66").setup();
-        System.setProperty("webdriver.chrome.driver", "C:/gitPractice/chromedriver_win32/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\gitPractice\\chromedriver_win32\\chromedriver.exe");
         driver = new ChromeDriver();
+
+
 
         elementsHelper = new ElementsHelper(driver);
         driver.get(testUrl);
