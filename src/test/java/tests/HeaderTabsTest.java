@@ -10,6 +10,7 @@ public class HeaderTabsTest extends TestBase {
 
     @Test(groups = {"git_test"})
     public void HeaderTabs() {
+        System.out.println("--------------------------------");
         Assert.assertTrue(elementsHelper.isElementClickable(headerTabs.headerTabPullRequests, 5), "pullRequestsButton should be clickable");
         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(headerTabs.headerTabPullRequests, 1), "Pull requests");
 

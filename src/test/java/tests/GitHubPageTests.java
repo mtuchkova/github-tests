@@ -47,6 +47,8 @@ public class GitHubPageTests extends TestBase{
     }
     @Test(priority = 3,groups = {"git_test"})
     public void newGist() {
+
+        System.out.println("--------------------------------");
         elementsHelper.clickOnVisibleAndClickableElement(headerTabs.createNewMenuButton, 15);
         elementsHelper.clickOnVisibleAndClickableElement(newGist.newGistButton, 15);
 
@@ -56,6 +58,7 @@ public class GitHubPageTests extends TestBase{
     }
     @Test(priority = 4,groups = {"git_test"})
     public void newOrganization() {
+        System.out.println("--------------------------------");
         elementsHelper.clickOnVisibleAndClickableElement(headerTabs.createNewMenuButton, 10);
         elementsHelper.clickOnVisibleAndClickableElement(newOrganization.newOrganizatoinButton, 10);
 
