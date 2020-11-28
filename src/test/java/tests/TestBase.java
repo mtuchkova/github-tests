@@ -20,7 +20,8 @@ public class TestBase {
     public void setUp( Browsers browser) {
         switch (browser) {
             case CHROME:
-                ChromeDriverManager.getInstance(DriverManagerType.CHROME).setup();
+                //ChromeDriverManager.getInstance(DriverManagerType.CHROME).setup();
+                ChromeDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
                 break;
             case FIREFOX:
