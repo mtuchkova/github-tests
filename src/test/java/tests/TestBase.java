@@ -36,7 +36,7 @@ public class TestBase {
     @AfterGroups(alwaysRun = true, groups = {"git_test"})
     public void AfterTests() {
 
-        driver.quit();
+        //driver.quit();
     }
 }
 
