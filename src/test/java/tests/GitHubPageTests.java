@@ -1,6 +1,7 @@
 package tests;
 
 import org.testng.Assert;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import pages.*;
 
@@ -12,13 +13,14 @@ public class GitHubPageTests extends TestBase{
     NewOrganization newOrganization = new NewOrganization();
     NewProject newProject = new NewProject();
 
+    @Ignore
     @Test(priority = 1,groups = {"git_test"})
     public void newRepository() {
         elementsHelper.clickOnVisibleAndClickableElement(headerTabs.createNewMenuButton, 10);
         elementsHelper.clickOnVisibleAndClickableElement(newRepository.newrepositoryButton, 10);
 
         Assert.assertTrue(elementsHelper.isElementClickable(newRepository.ownerButton, 5), "ownerButton should be clickable");
-        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newRepository.ownerButton, 1), "angelinaaa");
+        Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newRepository.ownerButton, 1), "mtuchkova");
 
         Assert.assertTrue(elementsHelper.isElementClickable(newRepository.addGitignoreButton, 1), "addgitignoreButton should be clickable");
         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newRepository.addGitignoreButton, 1), "Add .gitignore: None");
@@ -29,6 +31,8 @@ public class GitHubPageTests extends TestBase{
         Assert.assertTrue(elementsHelper.isElementClickable(newRepository.importRepositoryLink, 1), "importRepositoryLink should be clickable");
         Assert.assertEquals(elementsHelper.getElementTextVisibilityOf(newRepository.importRepositoryLink, 1), "Import a repository.");
     }
+
+    @Ignore
     @Test(priority = 2,groups = {"git_test"})
     public void importRepository() {
         elementsHelper.clickOnVisibleAndClickableElement(headerTabs.createNewMenuButton, 10);

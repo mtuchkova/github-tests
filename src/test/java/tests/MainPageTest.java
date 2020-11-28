@@ -1,6 +1,7 @@
 package tests;
 
 import org.testng.Assert;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import pages.*;
 
@@ -8,6 +9,7 @@ public class MainPageTest extends TestBase{
     HeaderTabs headerTabs = new HeaderTabs();
     MainPage mainPage =new MainPage();
 
+    @Ignore
     @Test(groups = {"git_test"})
     public void MainPage() {
         elementsHelper.clickOnVisibleAndClickableElement(headerTabs.viewProfileAndMoreButton,10);
