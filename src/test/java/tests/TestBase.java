@@ -5,6 +5,7 @@ import io.github.bonigarcia.wdm.config.DriverManagerType;
 import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.*;
 
 public class TestBase {
@@ -16,6 +17,10 @@ public class TestBase {
     @BeforeGroups(alwaysRun = true, groups = {"git_test"})
     @Parameters("browser")
     public void setUp(Browsers browser) {
+
+
+        ChromeOptions options = new ChromeOptions();
+        options.setBinary("C:\\Users\\tuchu\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");
                 ChromeDriverManager.getInstance(DriverManagerType.CHROME).setup();
 //                ChromeDriverManager.chromedriver().browserVersion("87.0.4280.66").setup();
 //        System.setProperty("webdriver.chrome.driver", "C:\\gitPractice\\chromedriver_win32\\chromedriver.exe");
