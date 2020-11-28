@@ -2,7 +2,7 @@
 
 <suite name="FirstLesson" >
     <test name="SeparateBrowserTest">
-        <parameter name="browser" value="${browser}"/>
+        <parameter name="browser" value="CHROME"/>
         <groups>
             <run>
                 <include name="git_test"/>

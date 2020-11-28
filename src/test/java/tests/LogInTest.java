@@ -11,8 +11,8 @@ public class LogInTest extends TestBase {
 
     @Test(groups = {"git_test"})
     public void logInPageTest() {
-        elementsHelper.textInputField(loginPage.loginField, 10, "angelina.batayeva@gmail.com");
-        elementsHelper.textInputField(loginPage.passwordField, 10, "Angryowl19752606");
+        elementsHelper.textInputField(loginPage.loginField, 10, "tuchusya@gmail.com");
+        elementsHelper.textInputField(loginPage.passwordField, 10, "6a7b8c6a7b8c");
         elementsHelper.clickOnVisibleAndClickableElement(loginPage.signInButton, 10);
     }
 }
