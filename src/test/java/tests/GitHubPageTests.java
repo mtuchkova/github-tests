@@ -13,7 +13,7 @@ public class GitHubPageTests extends TestBase{
     NewOrganization newOrganization = new NewOrganization();
     NewProject newProject = new NewProject();
 
-    @Ignore
+
     @Test(priority = 1,groups = {"git_test"})
     public void newRepository() {
         elementsHelper.clickOnVisibleAndClickableElement(headerTabs.createNewMenuButton, 10);
