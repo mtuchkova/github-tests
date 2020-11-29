@@ -25,7 +25,7 @@ public class TestBase {
 //                ChromeDriverManager.chromedriver().browserVersion("87.0.4280.66").setup();
 //        System.setProperty("webdriver.chrome.driver", "C:\\gitPractice\\chromedriver_win32\\chromedriver.exe");
 //        driver = new ChromeDriver();
-        driver = new ChromeDriver(options);
+        WebDriver driver = new ChromeDriver(options);
 
 
         elementsHelper = new ElementsHelper(driver);
